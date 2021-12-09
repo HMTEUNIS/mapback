@@ -3,27 +3,26 @@ import './App.css';
 import Map from './Map';
 import Display from './Display'
 import Navbar from './Navbar'
-import TopRatedNeighborhoods from './TopRatedNeighborhoods'
 import BestEats from './BestEats';
-import TopRatedEvents from './TopRatedEvents'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 function App() {
   const [selected, setSelected] = useState("")
+  const [selectedid, setSelectedid] = useState([])
+  const [re, setre] = useState(false)
+
   return (
     <Router>
     <div className="App">
       <Navbar />
       <Switch>
       <Route path='/' exact component={Home}/>
-      <Route path='/TopRatedEvents' component={TopRatedEvents} />
-      <Route path= '/TopRatedNeighborhoods' component={TopRatedNeighborhoods} />
       <Route path='/BestEats' component={BestEats} />
       </Switch>
-      <Display selected={selected} />
-      <Map setSelected={setSelected} />
-     
+      
+      <Map setSelected={setSelected} re={re} setre={setre} setSelectedid={setSelectedid} />
+      <Display selected={selected} re={re} selectedid={selectedid}/>
     </div>
     </Router>
   );

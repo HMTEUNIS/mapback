@@ -1,6 +1,6 @@
 import { useState } from 'react'
 export default Map;
-function Map({setSelected}) {
+function Map({setSelected, setSelectedid, setre, re}) {
     // const [height, setHeight] = useState(600);
     // const [width, setWidth] = useState(1000);
     const [url, setUrl] = useState("https://media.istockphoto.com/vectors/modern-city-map-san-francisco-city-of-the-usa-vector-id918457820?k=20&m=918457820&s=612x612&w=0&h=YLzKVDBpvMvNEhOcWvqEOHlGG4_c3xy4oW21mdKxWhQ=");
@@ -9,6 +9,9 @@ function Map({setSelected}) {
     const handleClick = (e) => {
         e.preventDefault()
         setSelected(e.target.alt)
+        setSelectedid(e.target.target)
+        setre(!re)
+       
         // setShow(!show)
     };
 

@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+#root > div > div.mapdiv > img {
+  align-self: center;
+}
 .App-logo {
   height: 95vmin;
   pointer-events: none;
@@ -10,7 +12,9 @@
 @media (prefers-reduced-motion: no-preference) {
  
 }
-
+#root > div > div.displaydiv {
+  align-items: left;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,9 +30,7 @@
   color: #61dafb;
 }
 
-.mapdiv {
-  
-}
+
 
 body {
   margin: 0;
@@ -72,6 +74,7 @@ body {
   border-right: 1px solid #ccc; }
 .displaydiv {
 background-color: rgb(255, 255, 255);
+align-items: left ;
 margin: auto;
 width: 50%;
 border: 3px solid rgb(0, 0, 0);
