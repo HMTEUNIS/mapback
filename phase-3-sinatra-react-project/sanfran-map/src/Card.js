@@ -1,13 +1,13 @@
-function Card ({use, selectedid}){
+function Card ({use, selectedid, sorted, el}){
    
-    
+    console.log("in card", sorted)
     return (
         <>
         
-        <p>Eat: {use.eat} </p>
-        <p>Learn: {use.learn}</p>
-        <p>Do: {use.do}</p>
-        <p>Watch: {use.watch} </p>
+        <p>Eat: {el.eat} </p>
+        <p>Learn: {el.learn}</p>
+        <p>Do: {el.do}</p>
+        <p>Watch: {el.watch} </p>
     </>
     )
 }

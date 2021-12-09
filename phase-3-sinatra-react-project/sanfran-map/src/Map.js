@@ -9,8 +9,7 @@ function Map({setSelected, setSelectedid, setre, re}) {
     const handleClick = (e) => {
         e.preventDefault()
         setSelected(e.target.alt)
-        setSelectedid(e.target.target)
-        setre(!re)
+        setSelectedid(parseInt(e.target.target))
        
         // setShow(!show)
     };

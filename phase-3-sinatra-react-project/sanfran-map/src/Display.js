@@ -5,14 +5,7 @@ function Display ({selected, selectedid, re}) {
     const [data, setdata] = useState("")
     const [use, setuse] = useState("")
     const [sorted, setsorted] = useState([])
-    // useEffect(() => {
-    //     fetch(`http://localhost:9292/neighborhood`)
-    //     .then ((res) => res.json())
-    //     .then ((data ) => {
-    //          setdata(data)
-    //     })
-    // }, []);
-   
+
     useEffect(() => {
         fetch(`http://localhost:9292/suggestion`)
         .then ((res) => res.json())
@@ -20,22 +13,21 @@ function Display ({selected, selectedid, re}) {
              setuse(data)
         })
     }, []);
-    const handleSort = (selectedid) => {
-        const nids = use.filter (sObj => sObj.neighborhood_id === parseInt(selectedid))
+    function load (e){
+        const nids = use.filter (sObj => sObj.neighborhood_id === selectedid)
        
-        console.log("nids", nids)
+        setsorted(nids)
     }
-    // setsorted(handleSort())
-    console.log(typeof selectedid)
+   
+   
     console.log("sprted", sorted)
     return (
         <div className="displaydiv">
             <p>{selected}</p>
-            <button onClick={(e) =>handleSort(e.target.target)}>maybe</button>
-            <div>{use ?
-                <Card use={use} selectedid={selectedid} /> : null
-}{console.log("use", use)}
+            <div>{use ? sorted.map(el =>  <Card key={el.id} el={el} /> )
+                : null}
 </div>
+<button onClick={e =>load()}>Take A Look</button>
         </div>
     )
 }
