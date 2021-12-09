@@ -1,4 +1,5 @@
-class Suggestion <ActiveRecord::Base
-  belongs_to :neighorhood
-    belongs_to :user
+class Suggestion < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :neighborhood
+  
 end

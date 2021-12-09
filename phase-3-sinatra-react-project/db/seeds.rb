@@ -107,8 +107,8 @@ neighborhood90 = Neighborhood.create(name: "Stonestown")
 
 puts "Neighborhoods Seeded"
 puts "seeding suggestions"
+suggestion1 = Suggestion.create(neighborhood_id: neighborhood1.id, user_id: user3.id, eat: "Sessions at the Presidio ", learn: "The Walt Disney Family Museum", watch: "Presidio Theatre", do: "The Palace Of Fine Arts",  rating: 5, comment: "I JUST LOVE IT")
 
-suggestion1 = Suggestion.create(eat: "Sessions at the Presidio ", learn: "The Walt Disney Family Museum", watch: "Presidio Theatre", do: "The Palace Of Fine Arts",  rating: 5, comment: "I JUST LOVE IT", neighborhood_id: neighborhood1.id, user_id: user3.id)
 suggestion2 = Suggestion.create(eat: "Delarosa", learn: "Sailing SanFrancisco", watch: "BATS Improv Theatre", do: "The Wave Organ",  rating: 5, comment: "The wave organ is so trippy", neighborhood_id: neighborhood2.id, user_id: user1.id)
 suggestion3 = Suggestion.create(eat: "Aux Delices Vietnamese Restaurant", learn: "The  SFCityGuides Walking Tour", watch: "Cobb's Comedy Club ", do: "Cable Car rides",  rating: 4, comment: "its fun!", neighborhood_id: neighborhood3.id, user_id: user3.id)
 suggestion4 = Suggestion.create(eat: "Tacko", learn: "Mcelroy Octogon House", watch: "", do: "Shopping on Lombard street",  rating: 5, comment: "I JUST LOVE IT", neighborhood_id: neighborhood4.id, user_id: user2.id)
@@ -159,7 +159,7 @@ suggestion48 = Suggestion.create(eat: "", learn: "", watch: "", do: "Tahoe Treet
 suggestion49 = Suggestion.create(eat: "", learn: "", watch: "Mount Davidson", do: "Wacky Jacky Sport Fishing", rating:4 , comment:"Great fishing experience", neighborhood_id: neighborhood49.id, user_id: user3.id)
 suggestion50 = Suggestion.create(eat: "Balboa Cafe", learn: "", watch: "The Terrace", do: "", rating:5 , comment:"Exquisite cafe and great food", neighborhood_id: neighborhood50.id, user_id: user3.id)
 suggestion51 = Suggestion.create(eat: "Champa Garden", learn: "", watch: "", do: "Elevate Group Fitness", rating:4 , comment:"Great training program", neighborhood_id: neighborhood51.id, user_id: user2.id)
-suggestion52 = Suggestion.create(eat: "", learn: "", watch: "Oracle Park", do: "Westwood Hills Park", rating: , comment:"Home of the San Franciso Giants. GO GIANTS!!!", neighborhood_id: neighborhood52.id, user_id: user2.id)
+suggestion52 = Suggestion.create(eat: "", learn: "", watch: "Oracle Park", do: "Westwood Hills Park", rating: 5 , comment:"Home of the San Franciso Giants. GO GIANTS!!!" , neighborhood_id: neighborhood52.id, user_id: user2.id)
 suggestion53 = Suggestion.create(eat: "Edible Excursions", learn: "", watch: "", do: "The St. Regis San Francisco Hotel", rating: 4, comment:"Real nice hotel", neighborhood_id: neighborhood53.id, user_id: user4.id)
 suggestion54 = Suggestion.create(eat: "", learn: "", watch: "The San Francisco Sightseeing Company", do: "Jackson Court San Francisco", rating: 3, comment:"Nice views to take in", neighborhood_id: neighborhood54.id, user_id: user1.id)
 suggestion55 = Suggestion.create(eat: "", learn: "", watch: "", do: "Mount Davidson", rating: 5, comment:"Amazing view from top of the mountain", neighborhood_id: neighborhood55.id, user_id: user5.id)
@@ -175,7 +175,7 @@ suggestion64 = Suggestion.create(eat: "Aub Zam Zam", learn: "Haight Ashbury Walk
 suggestion65 = Suggestion.create(eat: "Pastries from Jane", learn: "", watch: "", do: "Visit Say Cheese", rating: 4, comment:"Absolutely love Jane!", neighborhood_id: neighborhood65.id, user_id: user6.id)
 suggestion66 = Suggestion.create(eat: "Café International", learn: "Harvey Milk Photo Center", watch: "ZeroFriends Art Gallery", do: "Visit Rooky Ricardo’s Records", rating: 3, comment:"I've never listened to so much Jazz", neighborhood_id: neighborhood66.id, user_id: user5.id)
 suggestion67 = Suggestion.create(eat: "Duboce Park Cafe", learn: "", watch: "", do: "Visit Duboce Park", rating: 2, comment:"Not too much around, still a nice neighborhood though!", neighborhood_id: neighborhood67.id, user_id: user8.id)
-suggestion68 = Suggestion.create(eat: "", learn: "Mission Dolores Architecture", watch: "", do: "Enjoy a stroll through the birthplace of SF", rating: 3 comment:"Lovely historic neighborhood that has remained true to it's roots", neighborhood_id: neighborhood68.id, user_id: user4.id)
+suggestion68 = Suggestion.create(eat: "", learn: "Mission Dolores Architecture", watch: "", do: "Enjoy a stroll through the birthplace of SF", rating: 3, comment:"Lovely historic neighborhood that has remained true to it's roots", neighborhood_id: neighborhood68.id, user_id: user4.id)
 suggestion69 = Suggestion.create(eat: "'Taste of the Mission' Food Tour", learn: "Visit the Historic Mission San Francisco de Asis", watch: "", do: "Soak in the Colors & Stories of the Mission District Murals", rating: 3, comment:"Fun friendly area", neighborhood_id: neighborhood69.id, user_id: user3.id)
 suggestion70 = Suggestion.create(eat: "Anchor Steam Brewing Company", learn: "Museum of Craft and Design", watch: "Bottom of the Hill Live Venue", do: "", rating:5 , comment:"My wife left me because I spent so much time down here!", neighborhood_id: neighborhood70.id, user_id: user3.id)
 suggestion71 = Suggestion.create(eat: "Sutton Cellars", learn: "", watch: "The Lab's Chocolate Artbar Workshop", do: "Visit Bryr Studio", rating:4 , comment:"Chocolate and Wine... need I say more?", neighborhood_id: neighborhood71.id, user_id: user6.id)
