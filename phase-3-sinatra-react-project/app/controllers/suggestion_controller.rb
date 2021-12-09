@@ -1,6 +1,5 @@
 class SuggestionController < ApplicationController
-    get "/suggestions" do
-        suggestion = Suggestion.all
-        suggestion.to_json(include: :neighborhood)
+    get "/suggestion" do
+        Suggestion.all.to_json
     end
 end
