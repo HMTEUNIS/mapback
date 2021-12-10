@@ -1,18 +1,11 @@
 import Card from './Card'
 import { useEffect, useState } from 'react'
 
-function Display ({selected, selectedid, re}) {
+function Display ({selected, selectedid, use}) {
     const [data, setdata] = useState("")
-    const [use, setuse] = useState("")
     const [sorted, setsorted] = useState([])
 
-    useEffect(() => {
-        fetch(`http://localhost:9292/suggestion`)
-        .then ((res) => res.json())
-        .then ((data ) => {
-             setuse(data)
-        })
-    }, []);
+  
     function load (e){
         const nids = use.filter (sObj => sObj.neighborhood_id === selectedid)
        

@@ -16,3 +16,7 @@ class Neighborhood < ActiveRecord::Base
         b[0..4]
        end
 end
+
+
+    
+   

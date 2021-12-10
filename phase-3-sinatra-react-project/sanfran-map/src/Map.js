@@ -11,7 +11,7 @@ function Map({setSelected, setSelectedid, setre, re}) {
         setSelected(e.target.alt)
         setSelectedid(parseInt(e.target.target))
        
-        // setShow(!show)
+       
     };
 
 

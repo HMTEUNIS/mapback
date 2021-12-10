@@ -1,6 +1,5 @@
-function Card ({use, selectedid, sorted, el}){
+function Card ({el}){
    
-    console.log("in card", sorted)
     return (
         <>
         
