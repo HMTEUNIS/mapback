@@ -5,7 +5,9 @@ const Navbar = ()=> {
     return (
            <div>
               <ul id="nav">
-                
+              <Link to='/home'>
+                <li><a href="#">Home</a></li>
+                </Link>
                 <Link to='TopRatedNeighborhoods'>
                 <li><a href="#">Top Rated Neighborhoods</a></li>
                 </Link>

@@ -5,7 +5,7 @@ function Display ({selected, selectedid, use}) {
     const [data, setdata] = useState("")
     const [sorted, setsorted] = useState([])
 
-  
+
     function load (e){
         const nids = use.filter (sObj => sObj.neighborhood_id === selectedid)
        
@@ -17,7 +17,7 @@ function Display ({selected, selectedid, use}) {
     return (
         <div className="displaydiv">
             <p>{selected}</p>
-            <div>{use ? sorted.map(el =>  <Card key={el.id} el={el} /> )
+            <div>{use ? sorted.map(el =>  <Card key={el.id} selectedid={selectedid} id={el.id} el={el}  /> )
                 : null}
 </div>
 <button onClick={e =>load()}>Take A Look</button>

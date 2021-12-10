@@ -55,7 +55,7 @@ function handleSubmit (e) {
         do: D,
         rating: parseInt(R),
         comment: C,
-        neighborhood_id: parseInt(NID),
+        neighborhood_id: parseInt(NID - 1),
         user_id: parseInt(UID)
     }
 
@@ -63,7 +63,7 @@ function handleSubmit (e) {
     
     console.log(newUser)
 
-    fetch('http://localhost:8001/user', {
+    fetch('http://localhost:9292/user', {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
