@@ -30,18 +30,24 @@ const [UID, setUID] = useState(2)
 const [A, setA] = useState('')
 const [name, setName] =useState('')
 
-function createUser (e) {
-    e.preventDefault()
+// function createUser (e) {
+//     e.preventDefault()
 
-const newUser = {
-    name: name,
-    local: localyn
+// const newUser = {
+//     name: name,
+//     local: localyn,
+//     age: 30
     
-}
-console.log(newUser)
-}
+// }
+
 function handleSubmit (e) {
     e.preventDefault()
+    const newUser = {
+        name: name,
+        local: localyn,
+        age: 30
+        
+    }
     const newSugg = {
         eat: E,
         learn: L,
@@ -52,6 +58,30 @@ function handleSubmit (e) {
         neighborhood_id: parseInt(NID),
         user_id: parseInt(UID)
     }
+
+    if (name.length > 3) {
+    
+    console.log(newUser)
+
+    fetch('http://localhost:8001/user', {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log("test");
+        
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+
+    
+   
 
 console.log('POST', newSugg)
 
@@ -70,14 +100,31 @@ console.log('POST', newSugg)
     .catch((error) => {
     console.error('Error:', error);
     });
-   
-    }
+} else 
+
+console.log('POST', newSugg)
+
+fetch('http://localhost:9292/suggestion', {
+method: 'POST', 
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(newSugg),
+})
+.then(res => res.json())
+.then(data => {
+console.log("test");
+
+})
+.catch((error) => {
+console.error('Error:', error);
+    })}
 
     return (
     
     
   <div>
-  <form onSubmit={handleSubmit, createUser}>
+  <form onSubmit={handleSubmit}>
     <div className="comment form">
     <select name="user" id="user" onChange={e => setUID(e.target.value)}>
         { users.map (user =>
